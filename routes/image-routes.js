@@ -19,7 +19,9 @@ router.get("/", (req, res) => {
 
 router.post("/upload", upload.single("file"), (req, res) => {
   console.log(req.file);
-  res.send({ url: `http://localhost:5000/${req.file.filename}` });
+  res.send({
+    url: `https://test-backend-2-zysa.onrender.com/${req.file.filename}`,
+  });
 });
 
 export default router;
